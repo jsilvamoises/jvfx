@@ -1,5 +1,3 @@
-package splitflap.skin;
-
 /*
  * Copyright (c) 2015 by Gerrit Grunwald
  *
@@ -16,7 +14,7 @@ package splitflap.skin;
  * limitations under the License.
  */
 
-
+package splitflap;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.DoubleProperty;

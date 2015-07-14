@@ -35,6 +35,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.util.Random;
+import javafx.stage.StageStyle;
 
 
 public class DemoLcd extends Application {
@@ -72,8 +73,8 @@ public class DemoLcd extends Application {
                             .numberSystemVisible(false)
                             .lowerRightTextVisible(true)
                             .lowerRightText("Info")
-                            //.valueFont(Lcd.LcdFont.ELEKTRA)
-                            .valueFont(Lcd.LcdFont.LCD)
+                            .valueFont(Lcd.LcdFont.ELEKTRA)
+                            //.valueFont(Lcd.LcdFont.LCD)
                             .animated(true)
                             .build();
 
@@ -123,7 +124,7 @@ public class DemoLcd extends Application {
 
         stage.setTitle("Lcd demo");
         stage.centerOnScreen();
-        //stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();        
                 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package splitflap.skin;
+package splitflap;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;

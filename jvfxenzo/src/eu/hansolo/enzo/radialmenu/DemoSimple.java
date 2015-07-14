@@ -17,7 +17,6 @@
 package eu.hansolo.enzo.radialmenu;
 
 import eu.hansolo.enzo.common.SymbolType;
-import eu.hansolo.enzo.radialmenu.*;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -45,28 +44,28 @@ public class DemoSimple extends Application {
                                               .options(RadialMenuOptionsBuilder2.create()
                                                                .degrees(360)
                                                                .offset(-90)
-                                                               .radius(200)
-                                                               .buttonSize(72)
+                                                               .radius(300)
+                                                               .buttonSize(120)
                                                                .buttonHideOnSelect(true)
                                                                .buttonHideOnClose(false)
                                                                .buttonAlpha(1.0)
                                                                .simpleMode(true)
                                                                .strokeVisible(false)
                                                                .build())
-                                              .items(RadialMenuItemBuilder.create().thumbnailImageName(getClass().getResource("star.png").toExternalForm()).size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.LOCATION).tooltip("Location").size(48).build(),
-                                                            RadialMenuItemBuilder.create().selectable(true).symbol(SymbolType.MUSIC).tooltip("Music").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.SPEECH_BUBBLE).tooltip("Chat").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.BLUE_TOOTH).tooltip("Bluetooth").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.BULB).tooltip("Ideas").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.HEAD_PHONES).tooltip("Sound").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.TWITTER).tooltip("Twitter").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.TAGS).tooltip("Tags").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.CART).tooltip("Shop").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.ALARM).tooltip("Alarm").size(48).build(),
-                                                            RadialMenuItemBuilder.create().symbol(SymbolType.CLOCK).tooltip("Clock").size(48).build())
+                                              .items(RadialMenuItemBuilder.create().thumbnailImageName(getClass().getResource("star.png").toExternalForm()).size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.LOCATION).tooltip("Location").size(80).build(),
+                                                            RadialMenuItemBuilder.create().selectable(true).symbol(SymbolType.MUSIC).tooltip("Music").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.SPEECH_BUBBLE).tooltip("Chat").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.BLUE_TOOTH).tooltip("Bluetooth").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.BULB).tooltip("Ideas").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.HEAD_PHONES).tooltip("Sound").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.TWITTER).tooltip("Twitter").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.TAGS).tooltip("Tags").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.CART).tooltip("Shop").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.ALARM).tooltip("Alarm").size(80).build(),
+                                                            RadialMenuItemBuilder.create().symbol(SymbolType.CLOCK).tooltip("Clock").size(80).build())
                                               .build();
-        radialMenu.setPrefSize(500, 500);
+        radialMenu.setPrefSize(1000, 1000);
         radialMenu.setOnItemSelected(selectionEvent -> System.out.println("item " + selectionEvent.item.getTooltip() + " selected"));
         radialMenu.setOnItemClicked(clickEvent -> System.out.println("item " + clickEvent.item.getTooltip() + " clicked"));
         radialMenu.setOnMenuOpenStarted(menuEvent -> System.out.println("Menu starts to open"));
@@ -75,8 +74,8 @@ public class DemoSimple extends Application {
         radialMenu.setOnMenuCloseFinished(menuEvent -> System.out.println("Menu finished to close"));
 
         HBox buttons = new HBox();
-        buttons.setSpacing(10);
-        buttons.setPadding(new Insets(10, 10, 10, 10));
+        buttons.setSpacing(20);
+        buttons.setPadding(new Insets(20, 20, 20, 20));
         Button buttonShow = new Button("Show menu");
         buttonShow.setOnAction(actionEvent -> radialMenu.show());
         buttons.getChildren().add(buttonShow);
@@ -91,7 +90,7 @@ public class DemoSimple extends Application {
         pane.setBackground(new Background(new BackgroundFill(Color.rgb(150, 150, 150), CornerRadii.EMPTY, Insets.EMPTY)));
 
         Scene scene = new Scene(pane);
-
+        
         stage.setScene(scene);
         stage.show();
     }

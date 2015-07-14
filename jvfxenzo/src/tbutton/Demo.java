@@ -23,6 +23,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
@@ -33,16 +34,19 @@ public class Demo extends Application {
         control = TButtonBuilder.create()
                                 .prefWidth(144)
                                 .prefHeight(144)
-                                .text("Pi 1")
+                                .text("AR OFF")
+                                .ledColor(Color.RED)                
                                 .build();
         control.setOnSelect(new EventHandler<TButton.SelectEvent>() {
             @Override public void handle(TButton.SelectEvent selectEvent) {
                 System.out.println("Button selected");
+                control.textProperty().set("AR ON");
             }
         });
         control.setOnDeselect(new EventHandler<TButton.SelectEvent>() {
             @Override public void handle(TButton.SelectEvent selectEvent) {
                 System.out.println("Button deselected");
+                control.textProperty().set("AR OFF");
             }
         });
     }
@@ -53,7 +57,7 @@ public class Demo extends Application {
         pane.getChildren().setAll(control);
 
         Scene scene = new Scene(pane, 200, 200);
-
+        
         stage.setTitle("JavaFX TButton");
         stage.setScene(scene);
         stage.show();

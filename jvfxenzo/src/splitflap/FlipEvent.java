@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package splitflap.skin;
+package splitflap;
 
 import javafx.event.Event;
 import javafx.event.EventTarget;

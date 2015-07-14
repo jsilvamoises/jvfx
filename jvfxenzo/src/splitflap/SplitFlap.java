@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package splitflap.skin;
+package splitflap;
 
-
+import eu.hansolo.enzo.splitflap.skin.SplitFlapSkin;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.ObjectProperty;
@@ -31,7 +31,6 @@ import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import splitflap.SplitFlapSkin;
 
 
 public class SplitFlap extends Control {

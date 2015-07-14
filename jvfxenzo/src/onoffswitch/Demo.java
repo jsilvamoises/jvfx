@@ -55,8 +55,9 @@ public class Demo extends Application {
 
         iconSwitchText = new IconSwitch();
         iconSwitchText.setToggleGroup(iconSwitchToggleGroup);
-        iconSwitchText.setText("A");
+        iconSwitchText.setText("ALarme Incendido");
         iconSwitchText.setSymbolColor(Color.web("#34495e"));
+        iconSwitchText.widthProperty().add(300);
 
         iconSwitchSymbol1 = new IconSwitch();
         iconSwitchSymbol1.setSymbolType(SymbolType.ALARM);
@@ -76,7 +77,7 @@ public class Demo extends Application {
         pane.setAlignment(Pos.CENTER);
         pane.getChildren().addAll(onOffSwitch, iconSwitchSymbol, iconSwitchText, iconSwitchSymbol1);
 
-        Scene scene = new Scene(pane, 100, 150);
+        Scene scene = new Scene(pane, 500, 150);
 
         stage.setTitle("OnOffSwitch");
         stage.setScene(scene);

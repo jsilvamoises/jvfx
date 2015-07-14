@@ -14,8 +14,11 @@
  * limitations under the License.
  */
 
-package eu.hansolo.enzo.lcd;
+package lcd;
 
+import eu.hansolo.enzo.lcd.Alarm;
+import eu.hansolo.enzo.lcd.LcdClock;
+import eu.hansolo.enzo.lcd.LcdClockBuilder;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
